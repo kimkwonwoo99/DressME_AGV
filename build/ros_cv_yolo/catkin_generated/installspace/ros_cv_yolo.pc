@@ -1,0 +1,8 @@
+prefix=/home/er/myagv_ros/install
+
+Name: ros_cv_yolo
+Description: Description of ros_cv_yolo
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lros_cv_yolo
+Requires: cv_bridge image_transport message_generation rospy roscpp sensor_msgs std_msgs

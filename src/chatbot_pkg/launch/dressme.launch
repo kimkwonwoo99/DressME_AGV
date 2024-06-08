@@ -1,0 +1,18 @@
+<launch>
+
+    <node pkg="myagv_odometry" type="myagv_odometry_node" name="myagv_odometry_node" output="screen" />
+    <param name = "robot_description" textfile = "$(find myagv_urdf)/urdf/myAGV.urdf"/> 
+    
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+     <!--node name="base2lodom_frame" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /odom /base_footprint 50"/-->
+
+
+
+    <include file="$(find ydlidar_ros_driver)/launch/X2.launch" />
+
+	<node pkg="chatbot_pkg" type="speech_recognition_node.py" name="speech_recognition_node" output="screen" />
+    <node pkg="chatbot_pkg" type="response_tts_node.py" name="response_tts_node" output="screen" />
+    <node pkg="video_pkg" type="send_video.py" name="send_video" output="screen" />
+    <node pkg="chatbot_pkg" type="lidar_on.py" name="lidar_on" output="screen" />
+</launch>
