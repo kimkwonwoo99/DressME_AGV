@@ -11,7 +11,7 @@ from openai import OpenAI
 
 # OpenAI 클라이언트를 초기화합니다.
 client = OpenAI(
-    api_key="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"
+    api_key=""
 )
 
 # 대화 히스토리를 초기화합니다.
