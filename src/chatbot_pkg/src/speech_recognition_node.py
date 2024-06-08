@@ -19,7 +19,7 @@ class SpeechRecognizer:
             text = self.r.recognize_google(audio, language='ko')
             rospy.loginfo(f"인식된 음성: {text}")
             return text
-        except sr.UnknownValueError:
+        except sr.UnknownValueError:https://stackoverflow.com/questions/43378060/meaning-of-the-github-message-push-declined-due-to-email-privacy-restrictions
             rospy.logwarn("음성을 인식할 수 없습니다.")
             return ""
         except sr.RequestError as e:
