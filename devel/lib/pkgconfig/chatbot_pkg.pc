@@ -1,0 +1,8 @@
+prefix=/home/er/myagv_ros/devel
+
+Name: chatbot_pkg
+Description: Description of chatbot_pkg
+Version: 0.0.0
+Cflags: -I/home/er/myagv_ros/devel/include
+Libs: -L${prefix}/lib -lchatbot_pkg
+Requires: message_generation rospy std_msgs
